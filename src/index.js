@@ -1,13 +1,11 @@
 // imported modules
-const express = require('express');
-const morgan = require('morgan');
+const express = require("express");
+const morgan = require("morgan");
+const router = require("../routes/index");
+
 const app = express();
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 
-app.get('/',(req,res)=>{
-    res.send('hola mundo');
-});
-
-app.listen(3000,()=>{
-    console.log(`Server listen on port ${3000}`);
+app.listen(3000, () => {
+  console.log(`Server listen on port ${3000}`);
 });
