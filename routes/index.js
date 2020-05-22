@@ -1,11 +1,7 @@
 const { Router } = require("express");
 const router = Router();
+const movies = require('./movies.route')
 
-//route
-router.get("/", (req, res) => {
-  res.json({
-    title: "hello world",
-  });
-});
+router.use('/api',movies);
 
 module.exports = router;
